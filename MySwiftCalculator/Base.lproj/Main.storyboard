@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-gL-h6W">
                                 <rect key="frame" x="21.5" y="255" width="371" height="592"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-XP-bmH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-XP-bmH">
                                         <rect key="frame" x="0.0" y="0.0" width="371" height="132"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="110"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,7 +28,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="17" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0K-fo-Rys">
                                         <rect key="frame" x="0.0" y="144" width="371" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9H-S0-xba" customClass="RoundButton">
+                                            <button opaque="NO" tag="10" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9H-S0-xba">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -46,8 +46,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="acButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ztu-xd-cWj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7r-j9-t1v" customClass="RoundButton">
+                                            <button opaque="NO" tag="11" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7r-j9-t1v">
                                                 <rect key="frame" x="97" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -65,8 +68,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="minusPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LRS-zF-Ynf"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jX-nb-qpK" customClass="RoundButton">
+                                            <button opaque="NO" tag="12" contentMode="scaleAspectFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jX-nb-qpK">
                                                 <rect key="frame" x="194" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -84,8 +90,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonPercent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULu-Qo-wNe"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-2F-d9e" customClass="RoundButton">
+                                            <button opaque="NO" tag="13" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-2F-d9e">
                                                 <rect key="frame" x="291" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
@@ -102,6 +111,9 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="divisionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kbf-wc-aeF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -116,9 +128,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="vak-c0-Lrd">
                                         <rect key="frame" x="0.0" y="236" width="371" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-9Y-QiG" customClass="RoundButton">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-9Y-QiG">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="3aq-E1-mKN"/>
                                                     <constraint firstAttribute="width" constant="80" id="Pc2-0M-s6N"/>
@@ -133,35 +145,34 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sevenBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygC-Kt-i23"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-3X-E2T" customClass="RoundButton">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-3X-E2T">
                                                 <rect key="frame" x="97" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="ebv-W4-4kD"/>
                                                     <constraint firstAttribute="width" constant="80" id="uUl-Mz-kEg"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="8">
-                                                            <attributes>
-                                                                <font key="NSFont" size="45" name="AppleSDGothicNeo-SemiBold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <buttonConfiguration key="configuration" style="plain" title="8" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="45"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="eightBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvE-kM-dcZ"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHZ-Av-U0g" customClass="RoundButton">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHZ-Av-U0g">
                                                 <rect key="frame" x="194" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="bKe-w5-oT6"/>
                                                     <constraint firstAttribute="width" constant="80" id="rqA-hh-KXc"/>
@@ -176,8 +187,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nineBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azf-wv-rHu"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nP-xa-p4f" customClass="RoundButton">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nP-xa-p4f">
                                                 <rect key="frame" x="291" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
@@ -194,15 +208,18 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="multiBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XgQ-8E-yj5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJp-kJ-2Yp">
                                         <rect key="frame" x="0.0" y="328" width="371" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-dd-5da" customClass="RoundButton">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-dd-5da">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="Fud-x4-gAI"/>
                                                     <constraint firstAttribute="width" constant="80" id="YkV-Pe-Tol"/>
@@ -217,10 +234,13 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="fourBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MH1-lj-1SN"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdB-6A-haK" customClass="RoundButton">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdB-6A-haK">
                                                 <rect key="frame" x="97" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="8uM-SJ-ROs"/>
                                                     <constraint firstAttribute="width" constant="80" id="tt5-pv-uBd"/>
@@ -235,10 +255,13 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="fiveBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqY-Tr-pHI"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-au-BEn" customClass="RoundButton">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-au-BEn">
                                                 <rect key="frame" x="194" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="MNG-fg-avi"/>
                                                     <constraint firstAttribute="height" constant="80" id="OS9-Io-WrT"/>
@@ -253,8 +276,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sixBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzi-rc-Ba4"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-Vl-s1J" customClass="RoundButton">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybN-Vl-s1J">
                                                 <rect key="frame" x="291" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
@@ -271,15 +297,18 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="subButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzo-6e-CgV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kjm-gg-idC">
                                         <rect key="frame" x="0.0" y="420" width="371" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKZ-Hk-7wt" customClass="RoundButton">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKZ-Hk-7wt">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="XG1-Q8-dre"/>
                                                     <constraint firstAttribute="width" constant="80" id="ZIa-28-BSZ"/>
@@ -294,10 +323,13 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="oneBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNn-Lz-NCT"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-81-Swy" customClass="RoundButton">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-81-Swy">
                                                 <rect key="frame" x="97" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="ITv-gd-uxP"/>
                                                     <constraint firstAttribute="width" constant="80" id="yqQ-4c-wtf"/>
@@ -312,10 +344,13 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="twoBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKA-jR-L1i"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0u-ac-aY5" customClass="RoundButton">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0u-ac-aY5">
                                                 <rect key="frame" x="194" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="3EW-rK-Mk7"/>
                                                     <constraint firstAttribute="height" constant="80" id="KGh-ew-rZF"/>
@@ -330,8 +365,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="threeBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTd-3Q-0W6"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWd-f3-JGB" customClass="RoundButton">
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWd-f3-JGB">
                                                 <rect key="frame" x="291" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
@@ -348,15 +386,18 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="plusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQw-vK-3TW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-rY-VpJ">
                                         <rect key="frame" x="0.0" y="512" width="371" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-t1-js4" customClass="RoundButton">
+                                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-t1-js4">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="M2t-Bs-ZWG"/>
                                                     <constraint firstAttribute="width" constant="183" id="pCF-VG-lJD"/>
@@ -372,12 +413,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="zeroBTN:" destination="BYZ-38-t0r" eventType="touchDown" id="xkd-QL-LbM"/>
+                                                    <action selector="zeroBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAs-eW-BN0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-33-ua3" customClass="RoundButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-33-ua3">
                                                 <rect key="frame" x="194" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="P0Z-0K-19J"/>
                                                     <constraint firstAttribute="width" constant="80" id="VfT-0o-0dy"/>
@@ -392,8 +433,11 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dotBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVt-bp-x3d"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-fx-0Fx" customClass="RoundButton">
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-fx-0Fx">
                                                 <rect key="frame" x="291" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
@@ -410,6 +454,9 @@
                                                         <real key="value" value="40"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="equalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pka-aG-xLI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -425,7 +472,25 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="zeroButton" destination="7r2-t1-js4" id="UvG-zf-fw1"/>
+                        <outlet property="clearLabel" destination="S9H-S0-xba" id="3Ld-IE-g84"/>
+                        <outlet property="divLabel" destination="BdE-2F-d9e" id="mlo-p8-UrS"/>
+                        <outlet property="dotLabel" destination="TT1-33-ua3" id="dVP-Gc-MAC"/>
+                        <outlet property="eightLabel" destination="3dv-3X-E2T" id="SdG-CV-IRt"/>
+                        <outlet property="equallyLabel" destination="V2L-fx-0Fx" id="8i7-BZ-70l"/>
+                        <outlet property="fiveLabel" destination="DdB-6A-haK" id="Ghv-wG-i8E"/>
+                        <outlet property="fourLabel" destination="6HB-dd-5da" id="Q3L-7v-6Xi"/>
+                        <outlet property="minusLabel" destination="ybN-Vl-s1J" id="OaN-TH-r3y"/>
+                        <outlet property="multiLabel" destination="1nP-xa-p4f" id="ufJ-IQ-b27"/>
+                        <outlet property="nineLabel" destination="yHZ-Av-U0g" id="3z8-QK-Azc"/>
+                        <outlet property="oneLabel" destination="qKZ-Hk-7wt" id="7yO-Qm-FS0"/>
+                        <outlet property="percentLabel" destination="1jX-nb-qpK" id="FEW-aF-UZh"/>
+                        <outlet property="plusLabel" destination="uWd-f3-JGB" id="Hpl-0t-ANU"/>
+                        <outlet property="plusMinusLabel" destination="f7r-j9-t1v" id="HGU-6u-mNl"/>
+                        <outlet property="resultLabel" destination="nfp-XP-bmH" id="Tcj-Ti-EHE"/>
+                        <outlet property="sevenLabel" destination="moJ-9Y-QiG" id="Hny-mI-zPd"/>
+                        <outlet property="sixLabel" destination="oW4-au-BEn" id="V9j-fN-ErI"/>
+                        <outlet property="threeLabel" destination="S0u-ac-aY5" id="f2x-VB-fva"/>
+                        <outlet property="twoLabel" destination="3yn-81-Swy" id="7OZ-Cm-jLu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -433,69 +498,7 @@
             <point key="canvasLocation" x="18.840579710144929" y="70.982142857142847"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="1jX-nb-qpK">
-            <size key="intrinsicContentSize" width="54.5" height="56.5"/>
-        </designable>
-        <designable name="1nP-xa-p4f">
-            <size key="intrinsicContentSize" width="50.5" height="68"/>
-        </designable>
-        <designable name="3dv-3X-E2T">
-            <size key="intrinsicContentSize" width="50.5" height="68"/>
-        </designable>
-        <designable name="3yn-81-Swy">
-            <size key="intrinsicContentSize" width="48.5" height="68"/>
-        </designable>
-        <designable name="6HB-dd-5da">
-            <size key="intrinsicContentSize" width="50" height="68"/>
-        </designable>
-        <designable name="7r2-t1-js4">
-            <size key="intrinsicContentSize" width="53" height="68"/>
-        </designable>
-        <designable name="BdE-2F-d9e">
-            <size key="intrinsicContentSize" width="50.5" height="68"/>
-        </designable>
-        <designable name="DdB-6A-haK">
-            <size key="intrinsicContentSize" width="47" height="68"/>
-        </designable>
-        <designable name="S0u-ac-aY5">
-            <size key="intrinsicContentSize" width="48.5" height="68"/>
-        </designable>
-        <designable name="S9H-S0-xba">
-            <size key="intrinsicContentSize" width="65" height="56.5"/>
-        </designable>
-        <designable name="TT1-33-ua3">
-            <size key="intrinsicContentSize" width="35.5" height="68"/>
-        </designable>
-        <designable name="V2L-fx-0Fx">
-            <size key="intrinsicContentSize" width="48.5" height="68"/>
-        </designable>
-        <designable name="f7r-j9-t1v">
-            <size key="intrinsicContentSize" width="68" height="56.5"/>
-        </designable>
-        <designable name="moJ-9Y-QiG">
-            <size key="intrinsicContentSize" width="47" height="68"/>
-        </designable>
-        <designable name="oW4-au-BEn">
-            <size key="intrinsicContentSize" width="50" height="68"/>
-        </designable>
-        <designable name="qKZ-Hk-7wt">
-            <size key="intrinsicContentSize" width="41" height="68"/>
-        </designable>
-        <designable name="uWd-f3-JGB">
-            <size key="intrinsicContentSize" width="47.5" height="68"/>
-        </designable>
-        <designable name="yHZ-Av-U0g">
-            <size key="intrinsicContentSize" width="50" height="68"/>
-        </designable>
-        <designable name="ybN-Vl-s1J">
-            <size key="intrinsicContentSize" width="50.5" height="68"/>
-        </designable>
-    </designables>
     <resources>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
