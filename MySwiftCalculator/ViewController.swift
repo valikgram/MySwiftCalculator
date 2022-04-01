@@ -1,182 +1,100 @@
 //
 //  ViewController.swift
-//  Calculator
+//  MySwiftCalculator
 //
 //  Created by Дмитрий Валькович on 17.10.21.
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-    
-    
-    @IBOutlet weak var dotLabel: UIButton!
-    @IBOutlet weak var equallyLabel: UIButton!
-    @IBOutlet weak var oneLabel: UIButton!
-    @IBOutlet weak var twoLabel: UIButton!
-    @IBOutlet weak var threeLabel: UIButton!
-    @IBOutlet weak var plusLabel: UIButton!
-    @IBOutlet weak var fourLabel: UIButton!
-    @IBOutlet weak var fiveLabel: UIButton!
-    @IBOutlet weak var sixLabel: UIButton!
-    @IBOutlet weak var minusLabel: UIButton!
-    @IBOutlet weak var sevenLabel: UIButton!
-    @IBOutlet weak var eightLabel: UIButton!
-    @IBOutlet weak var nineLabel: UIButton!
-    @IBOutlet weak var multiLabel: UIButton!
-    @IBOutlet weak var clearLabel: UIButton!
-    @IBOutlet weak var plusMinusLabel: UIButton!
-    @IBOutlet weak var percentLabel: UIButton!
-    @IBOutlet weak var divLabel: UIButton!
-    
-    
+final class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        dotLabel.layer.cornerRadius = 40
-        equallyLabel.layer.cornerRadius = 40
-        oneLabel.layer.cornerRadius = 40
-        twoLabel.layer.cornerRadius = 40
-        threeLabel.layer.cornerRadius = 40
-        plusLabel.layer.cornerRadius = 40
-        fourLabel.layer.cornerRadius = 40
-        fiveLabel.layer.cornerRadius = 40
-        sixLabel.layer.cornerRadius = 40
-        sevenLabel.layer.cornerRadius = 40
-        eightLabel.layer.cornerRadius = 40
-        nineLabel.layer.cornerRadius = 40
-        multiLabel.layer.cornerRadius = 40
-        clearLabel.layer.cornerRadius = 40
-        plusMinusLabel.layer.cornerRadius = 40
-        percentLabel.layer.cornerRadius = 40
-        divLabel.layer.cornerRadius = 40
-        resultLabel.text = "0"
-    }
-    
-    var cleanZero = true
-    
-    func AddNumberToLabel(number: String) {
-        var textNumber = String(resultLabel.text!)
-        if cleanZero {
-            textNumber = ""
+    private var cleanZero = false
+    private var firstOperand: Double = 0
+    private var secondOperand: Double = 0
+    private var calculate: String = ""
+    private var dot = false
+    private var inputNumber: Double {
+        get {
+            return Double(resultLabel.text!)!
+        }
+        set {
+            let value = "\(newValue)"
+            let valueArray = value.components(separatedBy: ".")
+            if valueArray[1] == "0" {
+                resultLabel.text = "\(valueArray[0])"
+            }else {
+                resultLabel.text = "\(newValue)"
+            }
             cleanZero = false
         }
-        textNumber = textNumber + number
-        resultLabel.text = textNumber
     }
-    
-    
-    
-    @IBAction func oneBut (_ sender: Any) {
-        AddNumberToLabel(number: "1")
+    func calulateOperands(operation: (Double, Double) -> Double) {
+        inputNumber = operation(firstOperand, secondOperand)
+        cleanZero = false
     }
-    
-    @IBAction func twoBut(_ sender: Any) {
-        AddNumberToLabel(number: "2")
-    }
-    
-    @IBAction func threeBut(_ sender: Any) {
-        AddNumberToLabel(number: "3")
-    }
-    
-    @IBAction func fourBut(_ sender: Any) {
-        AddNumberToLabel(number: "4")
-    }
-    
-    @IBAction func fiveBut(_ sender: Any) {
-        AddNumberToLabel(number: "5")
-    }
-    
-    @IBAction func sixBut(_ sender: Any) {
-        AddNumberToLabel(number: "6")
-    }
-    
-    @IBAction func sevenBut(_ sender: Any) {
-        AddNumberToLabel(number: "7")
-    }
-    
-    @IBAction func eightBut(_ sender: Any) {
-        AddNumberToLabel(number: "8")
-    }
-    
-    @IBAction func nineBut(_ sender: Any) {
-        AddNumberToLabel(number: "9")
-    }
-    
-    @IBAction func zeroBut(_ sender: Any) {
-        AddNumberToLabel(number: "0")
-    }
-    
-    @IBAction func dotBut(_ sender: Any) {
-        AddNumberToLabel(number: ".")
-    }
-    
-    
-    var mulButton = "+"
-    var firstNum:Double?
-    
-    @IBAction func multiBut(_ sender: Any) {
-        mulButton = "*"
-        firstNum = Double(resultLabel.text!)
-        cleanZero = true
-    }
-    
-    @IBAction func equalButton(_ sender: Any) {
-        let secondNum = Double(resultLabel.text!)
-        var result:Double?
-        switch mulButton {
-        case "*":
-            result = firstNum! * secondNum!
-        case "/":
-            result = firstNum! / secondNum!
-        case "-":
-            result = firstNum! - secondNum!
-        case "+":
-            result = firstNum! + secondNum!
-        default:
-            result = 0.0
+    @IBAction func numPressed(_ sender: UIButton) {
+        let number = sender.currentTitle!
+        if cleanZero {
+            if resultLabel.text!.count < 9 {
+                resultLabel.text = resultLabel.text! + number
+            }
+        } else {
+            resultLabel.text = number
+            cleanZero = true
         }
-        resultLabel.text = String(result!)
-        cleanZero = true
     }
-    
-    @IBAction func subButton(_ sender: Any) {
-        mulButton = "-"
-        firstNum = Double(resultLabel.text!)
-        cleanZero = true
+    @IBAction func operationsButton(_ sender: UIButton) {
+        calculate = sender.currentTitle!
+        firstOperand = inputNumber
+        cleanZero = false
+        dot = false
     }
-    
-    @IBAction func divisionButton(_ sender: Any) {
-        mulButton = "/"
-        firstNum = Double(resultLabel.text!)
-        cleanZero = true
-    }
-    
-    @IBAction func plusButton(_ sender: Any) {
-        mulButton = "+"
-        firstNum = Double(resultLabel.text!)
-        cleanZero = true
-    }
-    
-    
-    @IBAction func acButton(_ sender: Any) {
+    @IBAction func clearInput(_ sender: UIButton) {
+        firstOperand = 0
+        secondOperand = 0
+        inputNumber = 0
         resultLabel.text = "0"
-        cleanZero = true
+        cleanZero = false
+        calculate = ""
+        dot = false
     }
-    
-    @IBAction func minusPlusButton(_ sender: Any) {
+    @IBAction func plusMinusButton(_ sender: UIButton) {
+        inputNumber = -inputNumber
+    }
+    @IBAction func percentButton(_ sender: UIButton) {
+        if firstOperand == 0 {
+            inputNumber = inputNumber / 100
+        } else {
+            secondOperand = firstOperand * inputNumber / 100
+        }
+    }
+    @IBAction func dotButton(_ sender: Any) {
+        if cleanZero && !dot {
+            resultLabel.text = resultLabel.text! + "."
+            dot = true
+        } else if !cleanZero && !dot {
+            resultLabel.text = "0."
+        }
         
-        var textNumber = String(resultLabel.text!)
-        textNumber = "-" +  textNumber
-        resultLabel.text = textNumber
     }
-    
-    
-    @IBAction func buttonPercent(_ sender: Any) {
-        var firstNum = Double(resultLabel.text!)
-        firstNum = firstNum!/100.0
-        resultLabel.text = String(firstNum!)
+    @IBAction func equalButton(_ sender: UIButton) {
+        
+        if cleanZero {
+            secondOperand = inputNumber
+        }
+        dot = false
+        switch calculate {
+        case "+":
+            calulateOperands{$0 + $1}
+        case "−":
+            calulateOperands{$0 - $1}
+        case "×":
+            calulateOperands{$0 * $1}
+        case "÷":
+            calulateOperands{$0 / $1}
+        default: break
+        }
     }
 }
+
 
